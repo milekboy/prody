@@ -12,7 +12,7 @@ return(
              <p className="text-2xl mt-8 text-center">You have successfully reset
 your password</p>
           </div>
-          <Link to="user-login"> 
+          <Link to="/user-login"> 
           <button className="bg-[#FFC107] text-white lg:w-[462px] h-[74px] w-full   text-2xl mt-8 rounded-xl">Back to Login</button>
           </Link>
        </div>

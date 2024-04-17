@@ -11,7 +11,7 @@ return(
              <h1 className="text-[#4D4D4D] font-bold text-3xl text-center mt-8">Account Created Successfully</h1>
              <p className="text-2xl mt-8 text-center">Kindly Login to Update your business information</p>
           </div>
-          <Link to="user-login"> 
+          <Link to="/user-login"> 
           <button className="bg-[#FFC107] text-white lg:w-[462px] h-[74px] w-full   text-2xl mt-8 rounded-xl">Back to Login</button>
           </Link>
        </div>

@@ -10,7 +10,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineLogin } from "react-icons/md";
 
 import { SidebarItem } from "../components/Sidebar";
-
+import { Link } from "react-router-dom";
 import Overview from "../components/Overview";
 import Productive from "../components/Productive";
 import Agents from "../components/Agents";
@@ -33,7 +33,7 @@ export default function Dashboard(){
         <SidebarItem  text='General' />
        
         <SidebarItem icon={<IoSettingsOutline  size={20}/>} text='Settings' />
-        <SidebarItem icon={< MdOutlineLogin  size={20}/>} text='Log out' />
+        <Link to="/user-login">  <SidebarItem icon={< MdOutlineLogin  size={20}/>} text='Log out' /> </Link>
       </Sidebar>
            </div>
            <div className={toggle === 1 ? "w-full block": "hidden"}>
