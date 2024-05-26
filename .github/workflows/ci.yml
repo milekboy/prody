@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
+
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build & Run Docker Image
+        run: |
+          sudo docker buildx build --platform linux/amd64 -t osinnowo/prodile-front-end .
+          sudo docker login --username=${{ secrets.USERNAME }} --password=${{ secrets.PASSWORD }}
+          sudo docker tag osinnowo/prodile-front-end osinnowo/prodile-front-end
+          sudo docker push osinnowo/prodile-front-end
+          sudo docker pull osinnowo/prodile-front-end
+
+      - name: Terminate Old Image
+        run: |
+          sudo docker stop osinnowo/prodile-front-end
+
+      - name: Deployment Finished
+        run: |
+          sudo docker run -d --rm -p 3000:3000 --name osinnowo/prodile-front-end osinnowo/prodile-front-end
