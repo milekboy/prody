@@ -31,4 +31,4 @@ jobs:
 
       - name: Deployment Finished
         run: |
-          sudo docker run -d --rm -p 3000:3000 --name osinnowo/prodile-front-end osinnowo/prodile-front-end
+          sudo docker run -d --rm -p 3000:3000 --name prodile-front-end osinnowo/prodile-front-end
