@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
 import SideImage from "../components/SideImage";
 import {  useNavigate } from "react-router-dom";
 import NetworkInstance from "../api/NetworkInstance";
@@ -65,7 +64,7 @@ export default function UserLogin(){
          <div className='h-[1px] w-[200px] bg-[#D6DADD]'></div>
         </div>
         <button className='lg:w-[462px] w-full mt-4 h-12   rounded-xl border p-[10px] gap-[10px] bg-[#eff7fa] justify-center items-center flex '>
-       <span className='text-lg'><FcGoogle /></span> <span className='font-semibold text-base leading-5'>Sign in with Google</span>
+       <span className='text-lg'></span> <span className='font-semibold text-base leading-5'>Sign in with Google</span>
         </button>
         </form>
         <p className="mt-4 text-xl ">Don't have an account?   <Link to="/">  <span className="text-[#1E4AE9] cursor-pointer"> Sign up</span> </Link></p>
