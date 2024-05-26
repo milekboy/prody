@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaEye } from "react-icons/fa";
-import { CiEdit } from "react-icons/ci";
-import { FaRegTrashAlt } from "react-icons/fa";
+// import { FaEye } from "react-icons/fa";
+// import { CiEdit } from "react-icons/ci";
+// import { FaRegTrashAlt } from "react-icons/fa";
 const recentOrderData = [
 	{
 		id: '1',
@@ -64,9 +64,9 @@ export default function UserList() {
 								<td className='border'>{order.industry}</td>
 								<td className='border'>{order.location}</td>
 								<td className='border'>{order.agent}</td>
-								<td className='flex gap-2 '><FaEye />
-								<CiEdit />
-								<FaRegTrashAlt />
+								<td className='flex gap-2 '>
+								{/* <CiEdit />
+								<FaRegTrashAlt /> */}
 								</td>
 							</tr>
 						))}

@@ -1,5 +1,5 @@
 import {  createContext, useState,  useContext } from "react"
-import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+// import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 const SidebarContext = createContext()
 
 export default function Sidebar({ children }) {
@@ -22,7 +22,7 @@ export default function Sidebar({ children }) {
             onClick={() => setExpanded((curr) => !curr)}
             className="p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100"
           >
-            {expanded ?   <IoIosArrowRoundBack className="mt- cursor-pointer" /> :<IoIosArrowRoundForward className="mt- cursor-pointer" />}
+            {expanded ?  '' :''}
           </button>
         </div>
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import RevenueCards from "../components/RevenueCards";
-import { IoIosArrowDown } from "react-icons/io";
-import { TbSwitch2 } from "react-icons/tb";
+// import { IoIosArrowDown } from "react-icons/io";
+// import { TbSwitch2 } from "react-icons/tb";
 import UserList from "./UserList";
 import Navbar from "./Navbar";
 export default function Productive(){
@@ -30,7 +30,7 @@ export default function Productive(){
       <button  className="bg-[#FFC107] text-white lg:w-52 h-12 w-full text-lg  font-bold rounded-md">Add productive unit +</button>
      <div className="w-[10%]">
       <div onClick={toggleDropDown} className="flex gap-1 cursor-pointer font-bold">
-       <p> Sort by</p>  <IoIosArrowDown className="mt-1" />
+       <p> Sort by</p>  
       </div>
       <div className={dropDown1?"rounded border-gray-300 bg-yellow-400 p-4 absolute w-400px] text-black hidden" :"rounded border-gray-300 bg-yellow-400 p-4 absolute w-400px] text-black"}>
         <p className="cursor-pointer ">
@@ -52,7 +52,7 @@ export default function Productive(){
       </div>
       <div className="w-[15%]">
       <div onClick={toggleDropDown2} className="flex gap-1 cursor-pointer font-bold ">
-       <p> Saved Search</p>  <IoIosArrowDown className="mt-1" />
+       <p> Saved Search</p>  
       </div>
       <div className={dropDown2?"rounded border-gray-300 bg-yellow-400 p-4 absolute w-400px] text-black hidden" :"rounded border-gray-300 bg-yellow-400 p-4 absolute w-400px] text-black"}>
         <p className="cursor-pointer ">
@@ -72,7 +72,7 @@ export default function Productive(){
         </p>
       </div>
       </div>
-      <TbSwitch2 size={30}/>
+      {/* <TbSwitch2 size={30}/> */}
       </div>
       <UserList/>
        </div>
