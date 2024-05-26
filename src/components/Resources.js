@@ -1,5 +1,5 @@
 import RevenueCards from "../components/RevenueCards";
-import { FaLongArrowAltRight } from "react-icons/fa";
+// import { FaLongArrowAltRight } from "react-icons/fa";
 import Navbar from "./Navbar";
 import SeedingCard from "./SeedingCard";
 export default function Resources(){
@@ -19,7 +19,7 @@ export default function Resources(){
         <div className="p-5">
             <div className="flex gap-5">
                 <div className="flex gap-2 text-orange-300 text-lg font-bold">
-                < p>Seeding</p> <div className="mt-1"><FaLongArrowAltRight /></div>
+                < p>Seeding</p> <div className="mt-1"></div>
                 </div>
               <SeedingCard/>
               <SeedingCard/>
