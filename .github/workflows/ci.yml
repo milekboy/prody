@@ -27,7 +27,7 @@ jobs:
 
       - name: Terminate Old Image
         run: |
-          sudo docker stop osinnowo/prodile-front-end
+          sudo docker stop prodile-front-end
 
       - name: Deployment Finished
         run: |
