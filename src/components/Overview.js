@@ -47,7 +47,7 @@ export default function Overview(){
          <div className="h-80 w-full rounded-2xl p-8 shadow-xl ms-2">
           <p className="text-lg">Chats</p>
           <div className=" mt-4 flex gap-4">
-              <img className="w-20 h-20" src='Images/John.png'/>
+              <img alt="" className="w-20 h-20" src='Images/John.png'/>
               <div className="w-[70%]">
                 <p className="font-bold text-lg">Victor Sunday</p>
                 <p className="mt-2 font-semibold text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem est, tincidunt at placerat ultricies, vehicula in erat. Donec vitae ante mollis, pretium augue vel, feugiat risus.</p>
@@ -57,7 +57,7 @@ export default function Overview(){
               </p>
           </div>
           <div className=" mt-4 flex gap-4">
-              <img className="w-20 h-20" src='Images/Collins.png'/>
+              <img alt="" className="w-20 h-20" src='Images/Collins.png'/>
               <div className="w-[70%]">
                 <p className="font-bold text-lg">Anita Collins</p>
                 <p className="mt-2 font-semibold text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem est, tincidunt at placerat ultricies, vehicula in erat. Donec vitae ante mollis, pretium augue vel, feugiat risus.</p>
@@ -70,7 +70,7 @@ export default function Overview(){
         </div>
         <div className="w-[40%]">
           <div >
-            <img className="" src="Images/flag.png"/>
+            <img alt="" className="" src="Images/flag.png"/>
           </div>
         </div>
        </div>

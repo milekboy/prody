@@ -12,7 +12,7 @@ return(
           <VscBellDot className="mt-2 text-red-400 cursor-pointer" size={30}/>
           <div className="w-[2px] h-full bg-black"></div>
           <div className="w-14 h-14 rounded-full border">
-         <img src='Images/John.png' className="w-full h-full cursor-pointer rounded-full"/>
+         <img alt="" src='Images/John.png' className="w-full h-full cursor-pointer rounded-full"/>
         </div>
           <div>
             <p className="text-xl font-semibold">Lekan Okeowo</p>
