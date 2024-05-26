@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - development
-  pull_request:
-    branches:
-      - development
-
 
 jobs:
   build:
@@ -17,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build & Run Docker Image
+      - name: Build & Run Docker Image...
         run: |
           sudo docker buildx build --platform linux/amd64 -t osinnowo/prodile-front-end .
           sudo docker login --username=${{ secrets.USERNAME }} --password=${{ secrets.PASSWORD }}
@@ -25,7 +21,7 @@ jobs:
           sudo docker push osinnowo/prodile-front-end
           sudo docker pull osinnowo/prodile-front-end
 
-      - name: Terminate Old Image
+      - name: Terminating old image...
         run: |
           sudo docker stop prodile-front-end
 
