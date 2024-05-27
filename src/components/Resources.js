@@ -5,7 +5,7 @@ import SeedingCard from "./SeedingCard";
 export default function Resources(){
   
     return(
-        <  div className="h-screen">
+        <  div className="">
              <Navbar head='Hello Lekan' summary='Today is a good day to make a difference'/>
         <p className="ps-5 mt-4 text-xl text-orange-300 font-bold">Resources</p>
         <div className="p-5">

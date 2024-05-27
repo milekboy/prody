@@ -4,7 +4,7 @@ import ProgressBar from "../components/ProgressBar";
 import Navbar from "./Navbar";
 export default function Overview(){
     return(
-        <  div>
+        <  div className="">
         <Navbar head='Dashboard' summary='Get summary of your weekly online ' cont='transactions here.'/>
         <div className="p-5">
         <div className="flex gap-5">
@@ -26,20 +26,20 @@ export default function Overview(){
                 </div>
                 <p className="mt-2 text-center">Add</p>
                 </div>
-               <SubscriberProfile path='Images/John.png' name='John'/>
-               <SubscriberProfile path='Images/Collins.png' name='Collins'/>
-               <SubscriberProfile path='Images/Funke.png' name='Funke'/>
-               <SubscriberProfile path='Images/Henry.png' name='Henry'/>
-               <SubscriberProfile path='Images/Mary.png' name='Mary'/>
+               <SubscriberProfile path='http://137.184.176.134:81/Images/John.png' name='John'/>
+               <SubscriberProfile path='http://137.184.176.134:81/Images/Henry.png' name='Collins'/>
+               <SubscriberProfile path='http://137.184.176.134:81/Images/Mary.png' name='Funke'/>
+               <SubscriberProfile path='http://137.184.176.134:81/Images/Anita.png' name='Henry'/>
+               <SubscriberProfile path='http://137.184.176.134:81/Images/Funke.png' name='Mary'/>
               </div>
            </div>
            <div className="w-[40%]">
               <p className="text-xl font-semibold">
                 Outcome Statistic
               </p>
-              <ProgressBar style1='bg-orange-400 flex justify-center items-center w-[52%] h-full text-xs font-bold ' percent='52%' sub='Subscription' img={"Images/Subscription@3x.png"}/>
-              <ProgressBar style1='bg-green-400 flex justify-center items-center w-[21%] h-full text-xs font-bold ' img='Images/Total Sales@3x.png' percent='21%' sub='Sales'/>
-              <ProgressBar style1='bg-blue-400 flex justify-center items-center w-[74%] h-full text-xs font-bold ' percent='74%' sub='Revenue' img='Images/Get Revenue@3x.png'/>
+              <ProgressBar style1='bg-orange-400 flex justify-center items-center w-[52%] h-full text-xs font-bold ' percent='52%' sub='Subscription' img={"http://137.184.176.134:81/Images/Subscription@3x.png"}/>
+              <ProgressBar style1='bg-green-400 flex justify-center items-center w-[21%] h-full text-xs font-bold ' img='http://137.184.176.134:81/Images/Total%20Sales@3x.png' percent='21%' sub='Sales'/>
+              <ProgressBar style1='bg-blue-400 flex justify-center items-center w-[74%] h-full text-xs font-bold ' percent='74%' sub='Revenue' img='http://137.184.176.134:81/Images/Get%20Revenue@3x.png'/>
            </div>
        </div>
        <div className="flex gap-2 mt-10 pb-28">
@@ -47,7 +47,7 @@ export default function Overview(){
          <div className="h-80 w-full rounded-2xl p-8 shadow-xl ms-2">
           <p className="text-lg">Chats</p>
           <div className=" mt-4 flex gap-4">
-              <img alt="" className="w-20 h-20" src='Images/John.png'/>
+              <img alt="" className="w-20 h-20" src='http://137.184.176.134:81/Images/Profile-1.png'/>
               <div className="w-[70%]">
                 <p className="font-bold text-lg">Victor Sunday</p>
                 <p className="mt-2 font-semibold text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem est, tincidunt at placerat ultricies, vehicula in erat. Donec vitae ante mollis, pretium augue vel, feugiat risus.</p>
@@ -57,7 +57,7 @@ export default function Overview(){
               </p>
           </div>
           <div className=" mt-4 flex gap-4">
-              <img alt="" className="w-20 h-20" src='Images/Collins.png'/>
+              <img alt="" className="w-20 h-20" src='http://137.184.176.134:81/Images/Collins.png'/>
               <div className="w-[70%]">
                 <p className="font-bold text-lg">Anita Collins</p>
                 <p className="mt-2 font-semibold text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem est, tincidunt at placerat ultricies, vehicula in erat. Donec vitae ante mollis, pretium augue vel, feugiat risus.</p>
@@ -70,7 +70,7 @@ export default function Overview(){
         </div>
         <div className="w-[40%]">
           <div >
-            <img alt="" className="" src="Images/flag.png"/>
+            <img alt="" className="" src="http://137.184.176.134:81/Images/flag.png"/>
           </div>
         </div>
        </div>

@@ -4,10 +4,14 @@ import UserLogin from "./pages/UserLogin";
 import AccountSuccesful from "./pages/AccountSuccessful";
 import ContinueReg from "./pages/ContinueReg";
 import Otp from "./pages/Otp";
+import Overview from "./components/Overview";
 import ResetPassword from "./pages/ResetPassword";
 import ResetPassword2 from "./pages/ResetPassword2";
 import PasswordResetSuccessful from "./pages/PasswordResetSuccessful";
-import Dashboard from "./pages/Dashboard";
+import DashboardLayout from "./layout/DashboardLayout";
+import Productive from "./components/Productive";
+import Agents from "./components/Agents";
+import Resources from "./components/Resources";
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +24,12 @@ function App() {
       <Route path="reset-password2" element={<ResetPassword2/>}/>
       <Route path="reset-password" element={<ResetPassword/>}/>
       <Route path="reset-password-successful" element={<PasswordResetSuccessful/>}/>
-      <Route path="dashboard" element={<Dashboard/>}/>
+      <Route path="/dashboard" element={<DashboardLayout/>}>
+      <Route path="productive" element={<Productive/>}/>
+      <Route path="overview" element={<Overview/>}/>
+      <Route path="agents" element={<Agents/>}/>
+      <Route path="resources" element={<Resources/>}/>
+      </Route>
     </Routes>
   </BrowserRouter>
   );
