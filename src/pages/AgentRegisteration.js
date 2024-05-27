@@ -167,7 +167,7 @@ setValidFirst(NAME_REGEX.test(first))
      </form>
           
      
-    <Link to="/user-login"> 
+    <Link to="/"> 
         <button className="bg-[#162D3A] text-white lg:w-[462px] w-full h-[74px] border-2 border-black text-2xl mt-4 rounded-xl">Back to Login</button>
         </Link>
         <div className=' justify-center gap-4 mt-4 items-center flex lg:w-[462px]'>
