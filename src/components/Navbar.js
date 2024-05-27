@@ -3,7 +3,7 @@
 
 export default function Navbar(props){
 return(
-    <div className="flex border-b-2 h-24 gap-5  p-5">
+    <div className="flex border-b-2 w-full h-24 gap-5  p-5">
           <div className="w-[30%]">
           <p className="text-xl font-semibold">{props.head}</p>
           <p className="text-sm tracking-wide text-zinc-400">{props.summary}<br/> {props.cont}</p>
@@ -12,7 +12,7 @@ return(
           {/* <VscBellDot className="mt-2 text-red-400 cursor-pointer" size={30}/> */}
           <div className="w-[2px] h-full bg-black"></div>
           <div className="w-14 h-14 rounded-full border">
-         <img alt="" src='Images/John.png' className="w-full h-full cursor-pointer rounded-full"/>
+         <img alt="" src='http://137.184.176.134:81/Images/John.png' className="w-full h-full cursor-pointer rounded-full"/>
         </div>
           <div>
             <p className="text-xl font-semibold">Lekan Okeowo</p>

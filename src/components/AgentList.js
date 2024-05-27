@@ -1,8 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import { FaEye } from "react-icons/fa";
-// import { CiEdit } from "react-icons/ci";
-// import { FaRegTrashAlt } from "react-icons/fa";
 const recentOrderData = [
 	{
 		id: '1',

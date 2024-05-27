@@ -42,7 +42,7 @@ export default function UserLogin(){
       <div className="lg:flex lg:px-0 px-4 gap-20">
       <div className="lg:ps-56 py-32">
     <p className="text-4xl font-semibold">
-        Welcome Back Wahab 👋
+        Welcome Back👋
     </p>
     <p className="text-xl mt-4 tracking-wide">
     Today is a new day. It's your day. You shape it. <br/>
