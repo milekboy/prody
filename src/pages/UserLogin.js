@@ -33,8 +33,8 @@ export default function UserLogin(){
                   }
                 //   initialize(access_token);
            setTimeout(() => {
-            navigate("/dashboard")
-          }, 3000)
+            navigate("/dashboard/overview")
+          }, 1000)
             }}catch (err) {
                 console.log(err) 
               }}
@@ -51,13 +51,14 @@ export default function UserLogin(){
   <form onSubmit={signIn}>
     <input
      onChange={(e) => handleInputChange(e)}
-     type="email" placeholder="Email Address" className=" h-24 mt-8 w-full lg:w-[470px] z-0 placeholder:focus:-translate-y-8 placeholder:z-30 transition ease-in-out border-2 rounded-lg border-zinc-400 ps-3 "/>
+     type="email" placeholder="Email Address" className=" h-16 mt-8 w-full lg:w-[470px] z-0 placeholder:focus:-translate-y-5 placeholder:z-30 transition ease-in-out border-2 rounded-lg border-zinc-400 ps-3 "/>
 
     <input
      onChange={(e) => handleInputChange(e)}
-    id="password" placeholder="Password" className=" h-24 mt-4 w-full lg:w-[470px] z-0 placeholder:focus:-translate-y-8 placeholder:z-30 transition ease-in-out border-2 rounded-lg border-zinc-400 ps-3 "/>
-    <button className="bg-[#FFC107] text-white w-full lg:w-[462px] h-[74px] border-2 border-black text-2xl mt-4 rounded-xl">Sign In</button>
-    <p className="mt-4 text-lg cursor-pointer text-[#1E4AE9]">Forgot Password?</p>
+    id="password" placeholder="Password" className=" h-16 mt-4 w-full lg:w-[470px] z-0 placeholder:focus:-translate-y-5 placeholder:z-30 transition ease-in-out border-2 rounded-lg border-zinc-400 ps-3 "/>
+    <button className="bg-[#FFC107] text-white w-full lg:w-[462px] h-[74px]   text-2xl mt-4 rounded-xl">Login</button>
+    <div className="flex justify-center"><p className="mt-4 text-lg cursor-pointer text-[#1E4AE9]">Forgot Password?</p></div>
+    
     <div className='w-full gap-4 mt-4 items-center flex '>
          <div className='h-[1px] w-[200px] bg-[#D6DADD]'></div>
          <p className='font-normal text-[#A39F9F] text-sm'>OR</p>
@@ -67,7 +68,7 @@ export default function UserLogin(){
        <span className='text-lg'></span> <span className='font-semibold text-base leading-5'>Sign in with Google</span>
         </button>
         </form>
-        <p className="mt-4 text-xl ">Don't have an account?   <Link to="/">  <span className="text-[#1E4AE9] cursor-pointer"> Sign up</span> </Link></p>
+        <div className="flex justify-center">  <p className="mt-4 text-xl ">Don't have an account?   <Link to="/user-signup">  <span className="text-[#1E4AE9] cursor-pointer"> Sign up</span> </Link></p></div>
     </div>
      <SideImage/>
     </div>

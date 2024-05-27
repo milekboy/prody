@@ -16,8 +16,8 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<AgentRegisteration />}/>
-      <Route path="user-login" element={<UserLogin />}/>
+      <Route path="user-signup" element={<AgentRegisteration />}/>
+      <Route path="/" element={<UserLogin />}/>
       <Route path="successful" element={<AccountSuccesful/>}/>
       <Route path="continue-reg" element={<ContinueReg/>}/>
       <Route path="otp-verification" element={<Otp/>}/>
