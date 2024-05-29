@@ -13,7 +13,7 @@ export default function AgentRegisteration(){
   const navigate = useNavigate();
   const nameRef= useRef();
   const errRef = useRef();
-  
+  const [error, setError]= useState(null)
   const [first, setFirst]= useState('');
   const [validFirst, setValidFirst]= useState(false);
 
@@ -78,9 +78,12 @@ setValidFirst(NAME_REGEX.test(first))
       }
          
       } catch (err) {
-      
-        console.log(err)
         setLoading(false)
+        setError(err.response.data.message) 
+        setTimeout(() => {
+          setError(null)
+        }, 3000)
+      
       }
         }
 
@@ -163,6 +166,7 @@ setValidFirst(NAME_REGEX.test(first))
 
    placeholder="Confirm Password" className=" h-24 mt-4 w-full lg:w-[470px] z-0 placeholder:focus:-translate-y-8 placeholder:z-30 transition ease-in-out border-2 rounded-lg border-zinc-400 ps-3 "/>
       </div>
+      {error && <div><p className="text-red-500">{error}</p></div> }
       <button
       className={`bg-[#FFC107] text-white lg:w-[462px] w-full h-[74px] border-2 border-black text-2xl mt-4 rounded-xl `}
       
