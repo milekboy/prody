@@ -3,10 +3,12 @@ import SideImage from "../components/SideImage";
 import {  useNavigate } from "react-router-dom";
 import NetworkInstance from "../api/NetworkInstance";
 import { useState } from "react";
+import GenericLoader from "../components/LoadingSpinner";
 export default function UserLogin(){
     const networkInstance = NetworkInstance();
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
     const [password, setPassword] = useState("");
 
     const handleInputChange = (e) => {
@@ -18,6 +20,7 @@ export default function UserLogin(){
       };
       const signIn = async (e) => {
         e.preventDefault();
+        setLoading(true)
         try {
           const response = await networkInstance.post(`/api/auth/login`, {
             email: email.toLowerCase(),
@@ -31,15 +34,17 @@ export default function UserLogin(){
                 else {
                     localStorage.removeItem("prodileJWT");
                   }
-                //   initialize(access_token);
            setTimeout(() => {
             navigate("/dashboard/overview")
           }, 1000)
+          setLoading(false)
             }}catch (err) {
                 console.log(err) 
+                setLoading(false)
               }}
     return(
       <div className="lg:flex lg:px-0 px-4 gap-20">
+        {loading && <GenericLoader/>}
       <div className="lg:ps-56 py-32">
     <p className="text-4xl font-semibold">
         Welcome Back👋
