@@ -22,7 +22,7 @@ export default function Sidebar() {
          </div>
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-1.5 rounded-lg bg-orange-400 hover:bg-gray-100 right-0 absolute"
+            className="p-1.5 rounded-lg bg-[#FFC107] right-0 absolute"
           >
             {expanded ?  '<' :'>'}
           </button>

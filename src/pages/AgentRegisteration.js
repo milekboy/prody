@@ -3,11 +3,13 @@ import { Link  } from "react-router-dom";
 import SideImage from "../components/SideImage";
 import {  useNavigate } from "react-router-dom";
 import NetworkInstance from "../api/NetworkInstance";
+import GenericLoader from "../components/LoadingSpinner";
 const NAME_REGEX = /^[a-zA-Z][a-zA-Z]{3,23}$/;
 const PWD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
 export default function AgentRegisteration(){
   const networkInstance = NetworkInstance();
+  const [loading,setLoading]= useState(false)
   const navigate = useNavigate();
   const nameRef= useRef();
   const errRef = useRef();
@@ -52,7 +54,7 @@ setValidFirst(NAME_REGEX.test(first))
 
       const signUp = async (e) => {
         e.preventDefault();
-        // if button enabled with JS hack
+        setLoading(true)
       
         try {
           const response = await networkInstance.post('/api/auth/register', {
@@ -71,19 +73,21 @@ setValidFirst(NAME_REGEX.test(first))
         setPwd('')
         setTimeout(() => {
           navigate("/successful")
-        }, 2000)
+        }, 1000)
+        setLoading(false)
       }
          
       } catch (err) {
       
         console.log(err)
-         
+        setLoading(false)
       }
         }
 
-
+    // disabled={!validFirst || !validLast|| !validPwd || !validMatch ? true : false}
     return(
       <div className="lg:flex lg:px-0 px-4 gap-20">
+          {loading && <GenericLoader/>}
         <p ref={errRef} className={errMessage? 'block': 'hidden'} aria-live="assertive">{errMessage}</p>
         <div className="lg:ps-56 py-32">
         <p className="text-4xl font-semibold">
@@ -160,8 +164,7 @@ setValidFirst(NAME_REGEX.test(first))
    placeholder="Confirm Password" className=" h-24 mt-4 w-full lg:w-[470px] z-0 placeholder:focus:-translate-y-8 placeholder:z-30 transition ease-in-out border-2 rounded-lg border-zinc-400 ps-3 "/>
       </div>
       <button
-     disabled={!validFirst || !validLast|| !validPwd || !validMatch ? true : false}
-      className="bg-[#FFC107] text-white lg:w-[462px] w-full h-[74px] border-2 border-black text-2xl mt-4 rounded-xl"
+      className={`bg-[#FFC107] text-white lg:w-[462px] w-full h-[74px] border-2 border-black text-2xl mt-4 rounded-xl `}
       
       >Sign Up</button>
      </form>
